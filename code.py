@@ -5,6 +5,8 @@ import matplotlib.mlab as mlab
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score, classification_report
+from sklearn.naive_bayes import BernoulliNB
+from sklearn.ensemble import RandomForestClassifier
 
 
 # checking feature balance
@@ -48,3 +50,26 @@ ypred = lr.predict(Xtest)
 print(accuracy_score(ytest, ypred))
 print(classification_report(ytest, ypred))
 
+# BernoulliNB
+bnb = BernoulliNB()
+bnb.fit(Xtrain,ytrain.values.ravel())
+
+# Training Accuracy
+bnb.score(Xtrain, ytrain)
+
+# Testing Accuracy
+ypred = bnb.predict(Xtest)
+print(accuracy_score(ytest, ypred))
+print(classification_report(ytest, ypred))
+
+# Random Forests
+rfc = RandomForestClassifier()
+rfc.fit(Xtrain,ytrain.values.ravel())
+
+# Training Accuracy
+rfc.score(Xtrain, ytrain)
+
+# Testing Accurcy
+ypred = rfc.predict(Xtest)
+print(accuracy_score(ytest, ypred))
+print(classification_report(ytest, ypred))
