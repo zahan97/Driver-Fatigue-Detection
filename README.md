@@ -7,5 +7,5 @@ P1, P2 ,..., P8  -> physiological factors<br>
 E1, E2 ,..., E11 -> environmental factors<br>
 V1, V2 ,..., V9 -> vehicular factors<br>
 
-Logisitic Regression, Naive Bayes and Random froests from scikit-learn are used for training...<br>
+Logisitic Regression, Naive Bayes and Random forests from scikit-learn are used for training...<br>
 Maximum accuracy is obtained using Random Forests...
